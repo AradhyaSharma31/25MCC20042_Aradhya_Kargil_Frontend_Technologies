@@ -9,6 +9,15 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #ad9091;
+}
+
 .main {
     height: 100%;
     font-family: Arial, sans-serif;
@@ -51,7 +60,6 @@ ul {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    margin: 50px 0;
     padding: 25px 0;
 }
 
@@ -63,15 +71,22 @@ ul {
 
 .hero-section {
     padding: 0 10px;
+    background-color: #ebe5e5;
 }
-
 
 button {
     background-color: #112325;
     color: white;
     border: none;
+    border-radius: 0.75rem;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #0e1a1a;
+    scale: 1.05;
 }
 
 .form-section {
@@ -92,7 +107,6 @@ form {
 footer {
     background-color: #112325;
     color: white;
-    text-align: center;
     margin: 25px 0;
     padding: 10px 0;
     bottom: 0;
@@ -101,4 +115,103 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+form input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+form input:focus {
+    border: none;
+    outline: none;
+}
+
+.input-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #d1cfd6;
+    margin: 10px 0;
+}
+
+.skills-section {
+    list-style-type: none;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    gap: 35px;
+}
+
+.skills {
+   background-color: #b94c51;
+   padding: 20px 25px;
+   border-radius: 30px;
+   user-select: none;
+}
+
+.skills:hover {
+    animation: fadeIn 0.3s ease-in-out;
+    background-color: #a03f43;
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: -5deg;
+    }
+    50% {
+        rotate: 5deg;
+    }
+    75% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 30px 0;
+    user-select: none;
+}
+
+thead {
+    background: linear-gradient(to right, #672980, #110b4d);
+    color: white;
+}
+
+.tr-body {
+    background-color: #d1cfd6;
+}
+
+.tr-body:hover {
+    background-color: #c4c2c7;
 }

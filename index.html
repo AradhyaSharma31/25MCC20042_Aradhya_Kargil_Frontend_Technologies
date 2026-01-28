@@ -53,9 +53,9 @@
                 </article>
             </section>
 
-            <section>
+            <section class="edu-section">
                 <h2>Education</h2>
-                <table border="1">
+                <table cellpadding="10" class="edu-table" border="1">
                     <thead>
                         <tr>
                             <th>Course</th>
@@ -66,7 +66,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="tr-body">
                             <td>MCA</th>
                             <td>CCD</th>
                             <td>CU</th>
@@ -74,7 +74,7 @@
                             <td>2025</th>
                         </tr>
 
-                        <tr>
+                        <tr class="tr-body">
                             <td>BCA</th>
                             <td>General</th>
                             <td>PU</th>
@@ -85,29 +85,47 @@
                 </table>
             </section>
 
-            <section>
+            <hr>
+
+            <section class="skills-section">
                 <h2>Skills</h2>
-                <ol type="I">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>ReactJS</li>
-                    <li>Java</li>
-                    <li>Springboot</li>
-                    <li>postgre sql</li>
+                <ul class="skills-list">
+                    <li class="skills">HTML</li>
+                    <li class="skills">CSS</li>
+                    <li class="skills">JavaScript</li>
+                    <li class="skills">ReactJS</li>
+                    <li class="skills">Java</li>
+                    <li class="skills">Springboot</li>
+                    <li class="skills">postgre sql</li>
+                    <li class="skills">AWS</li>
+                    <li class="skills">Git</li>
+                    <li class="skills">Github</li>
+                    <li class="skills">MySQL</li>
+                    <li class="skills">Operation Management</li>
+                </ul>
             </section>
+
+        <hr>
 
             <section class="form-section">
                 <h2>Contact Me</h2>
                 <form action="#">
-                    <label for="fn">Name: </label>&nbsp;&nbsp;
-                    <input type="text" name="fn"><br><br>
+                    <label for="fn">Name: </label>
+                    
+                    <span class="input-span">
+                        <input type="text" name="fn"><br><br>
+                    </span>
+                
+                    <label for="em">Email: </label>
+                    
+                    <span class="input-span">
+                        <input type="email" name="em"><br><br>
+                    </span>
 
-                    <label for="em">Email: </label>&nbsp;&nbsp;
-                    <input type="email" name="em"><br><br>
-
-                    <label for="msg">Message: </label>&nbsp;&nbsp;
-                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea><br><br>
+                    <label for="msg">Message: </label>&nbsp;
+                    <span class="input-span">
+                        <textarea name="msg" id="msg" cols="30" rows="10"></textarea><br><br>
+                    </span>
 
                     <button type="submit">Submit</button>
                 </form>
