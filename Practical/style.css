@@ -171,27 +171,30 @@ form input:focus {
 }
 
 .skills:hover {
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
     background-color: #a03f43;
-    transition: all 0.1s ease-in-out;
-    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
     0% {
         rotate: 0deg;
+        transform: scale(1);
     }
     25% {
         rotate: -5deg;
+        transform: scale(1.025);
     }
     50% {
         rotate: 5deg;
+        transform: scale(1.05);
     }
     75% {
         rotate: -5deg;
+        transform: scale(1.025);
     }
     100% {
-        rotate: 0deg;
+        rotate: 0deg;   
+        transform: scale(1);
     }
 }
 
