@@ -69,14 +69,20 @@ function NotesApp() {
 
               <div className="flex gap-2">
                 <button
-                  onClick={() => handleEdit(index)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleEdit(index)
+                  }}
                   className="bg-yellow-500 text-white px-4 py-1 rounded-md hover:bg-yellow-600 transition"
                 >
                   Edit
                 </button>
 
                 <button
-                  onClick={() => handleDelete(index)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDelete(index)
+                  }}
                   className="bg-red-500 text-white px-4 py-1 rounded-md hover:bg-red-600 transition"
                 >
                   Delete
