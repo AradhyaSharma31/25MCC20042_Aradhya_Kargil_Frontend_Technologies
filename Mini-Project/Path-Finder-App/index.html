@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathfinding Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>Pathfinding Visualizer</h1>
+      <p>Interactive visualization of graph traversal and shortest-path algorithms</p>
+    </div>
+  </header>
+
+  <section class="toolbar">
+
+    <div class="control-group">
+      <label for="algorithm">Algorithm</label>
+      <select id="algorithm">
+        <option value="bfs">Breadth-First Search (BFS)</option>
+        <option value="dfs">Depth-First Search (DFS)</option>
+        <option value="dijkstra">Dijkstra's Algorithm</option>
+        <option value="astar">A* Search</option>
+        <option value="greedy">Greedy Best-First Search</option>
+        <option value="bidirectional">Bidirectional Search</option>
+        <option value="ucs">Uniform Cost Search</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="speed">Animation Speed</label>
+      <select id="speed">
+        <option value="10">Fast</option>
+        <option value="30" selected>Normal</option>
+        <option value="75">Slow</option>
+      </select>
+    </div>
+
+    <div class="actions">
+      <button id="visualizeBtn">Visualize</button>
+      <button id="clearPathBtn">Clear Path</button>
+      <button id="clearWallsBtn">Clear Walls</button>
+      <button id="resetBtn">Reset Grid</button>
+    </div>
+
+  </section>
+
+  <section class="info-panel">
+
+    <div class="legend-item">
+      <span class="node start"></span>
+      <span>Start Node</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="node end"></span>
+      <span>Target Node</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="node wall"></span>
+      <span>Wall / Obstacle</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="node visited"></span>
+      <span>Visited Node</span>
+    </div>
+
+    <div class="legend-item">
+      <span class="node path"></span>
+      <span>Shortest / Final Path</span>
+    </div>
+
+  </section>
+
+  <main class="workspace">
+    <div id="grid"></div>
+  </main>
+
+  <section class="instructions">
+    <h3>Usage</h3>
+    <ul>
+      <li>Click or drag across cells to create walls.</li>
+      <li>Select an algorithm from the dropdown menu.</li>
+      <li>Press <strong>Visualize</strong> to animate the search.</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --border: #d9e1ec;
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --start: #16a34a;
+  --end: #dc2626;
+  --wall: #334155;
+  --visited: #60a5fa;
+  --path: #f59e0b;
+
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 40px;
+  box-shadow: var(--shadow);
+}
+
+.brand h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.brand p {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.toolbar {
+  width: 95%;
+  max-width: 1400px;
+  margin: 24px auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: end;
+  box-shadow: var(--shadow);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: white;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 0.94rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.info-panel {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.legend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow);
+  font-size: 0.92rem;
+}
+
+.node {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.start { background: var(--start); }
+.end { background: var(--end); }
+.wall { background: var(--wall); }
+.visited { background: var(--visited); }
+.path { background: var(--path); }
+
+.workspace {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(40, 24px);
+  justify-content: center;
+  gap: 1px;
+}
+
+.cell {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 1px solid #eef2f7;
+  transition: background 0.15s ease;
+}
+
+.cell:hover {
+  background: #e8eefc;
+  cursor: pointer;
+}
+
+.cell.start {
+  background: var(--start);
+}
+
+.cell.end {
+  background: var(--end);
+}
+
+.cell.wall {
+  background: var(--wall);
+}
+
+.cell.visited {
+  background: var(--visited);
+}
+
+.cell.path {
+  background: var(--path);
+}
+
+.instructions {
+  width: 95%;
+  max-width: 1400px;
+  margin: 24px auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.instructions h3 {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.instructions ul {
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.footer {
+  text-align: center;
+  padding: 22px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  button {
+    flex: 1;
+  }
+
+  #grid {
+    grid-template-columns: repeat(40, 20px);
+  }
+
+  .cell {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .topbar {
+    padding: 20px;
+  }
+
+  .brand h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+  }
+
+  #grid {
+    grid-template-columns: repeat(30, 18px);
+  }
+
+  .cell {
+    width: 18px;
+    height: 18px;
+  }
+}
